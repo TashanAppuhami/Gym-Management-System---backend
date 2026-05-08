@@ -1,34 +1,47 @@
 package edu.icet.ecom.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import edu.icet.ecom.util.Gender;
+import edu.icet.ecom.util.Status;
+import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "members")
+@Data
 public class Member {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstName;
-    private String lastName;
+    @Column(name = "first_name")
+    private String first_name;
 
-    @NotBlank
-    @Email
+    @Column(name = "last_name")
+    private String last_name;
+
+    @Column(name = "email")
     private String email;
-    private String phoneNumber;
 
-    private String gender;
+    @Column(name = "phone_number")
+    private String phone_number;
 
+    @Column(name = "gender")
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+
+    @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
+    @Column(name = "join_date")
     private LocalDate joinDate;
 
+    @Column(name = "address")
     private String address;
 
-    private boolean active;
+    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    private Status status;
 }
