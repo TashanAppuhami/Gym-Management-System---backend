@@ -1,6 +1,6 @@
 package edu.icet.ecom.controller;
 
-import edu.icet.ecom.dto.request.MemberDto;
+import edu.icet.ecom.dto.MemberDto;
 import edu.icet.ecom.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

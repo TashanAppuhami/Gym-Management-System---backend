@@ -1,6 +1,7 @@
-package edu.icet.ecom.dto.request;
+package edu.icet.ecom.dto;
 
 import edu.icet.ecom.util.Gender;
+import edu.icet.ecom.util.MembershipPlan;
 import edu.icet.ecom.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,11 +18,11 @@ public class MemberDto {
 
     private Long id;
 
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
 
     private String email;
-    private String phone_number;
+    private String phoneNumber;
 
     private Gender gender;
 
@@ -30,6 +31,8 @@ public class MemberDto {
     private LocalDate joinDate;
 
     private String address;
+
+    private MembershipPlan membershipPlan;
 
     private Status status;
 }

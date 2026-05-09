@@ -1,6 +1,6 @@
 package edu.icet.ecom.service.Impl;
 
-import edu.icet.ecom.dto.request.MemberDto;
+import edu.icet.ecom.dto.MemberDto;
 import edu.icet.ecom.entity.Member;
 import edu.icet.ecom.repositary.MemberRepositary;
 import edu.icet.ecom.service.MemberService;

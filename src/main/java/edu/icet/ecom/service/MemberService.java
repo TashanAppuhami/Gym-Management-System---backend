@@ -1,6 +1,6 @@
 package edu.icet.ecom.service;
 
-import edu.icet.ecom.dto.request.MemberDto;
+import edu.icet.ecom.dto.MemberDto;
 
 public interface MemberService {
     public  MemberDto rejisterMember(MemberDto memberdto);

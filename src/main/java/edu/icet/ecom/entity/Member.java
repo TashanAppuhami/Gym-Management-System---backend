@@ -1,6 +1,7 @@
 package edu.icet.ecom.entity;
 
 import edu.icet.ecom.util.Gender;
+import edu.icet.ecom.util.MembershipPlan;
 import edu.icet.ecom.util.Status;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -16,32 +17,26 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name")
-    private String first_name;
+    private String firstName;
 
-    @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
 
-    @Column(name = "email")
     private String email;
 
-    @Column(name = "phone_number")
-    private String phone_number;
+    private String phoneNumber;
 
-    @Column(name = "gender")
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    @Column(name = "join_date")
     private LocalDate joinDate;
 
-    @Column(name = "address")
     private String address;
 
-    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    private MembershipPlan membershipPlan;
+
     @Enumerated(EnumType.STRING)
     private Status status;
 }
