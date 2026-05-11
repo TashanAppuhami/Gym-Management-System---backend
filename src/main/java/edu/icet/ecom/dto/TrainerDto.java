@@ -1,12 +1,12 @@
 package edu.icet.ecom.dto;
 
 import edu.icet.ecom.util.Gender;
-import edu.icet.ecom.util.MembershipPlan;
 import edu.icet.ecom.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 
 import java.time.LocalDate;
 
@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 @ToString
-public class MemberDto {
+public class TrainerDto {
 
     private Long id;
 
@@ -22,21 +22,23 @@ public class MemberDto {
 
     private String lastName;
 
-    private String email;
-
-    private String phoneNumber;
-
-    private Integer age;
-
     private Gender gender;
 
     private LocalDate dateOfBirth;
 
-    private LocalDate joinDate;
+    private String email;
+
+    private String phoneNumber;
 
     private String address;
 
-    private MembershipPlan membershipPlan;
+    private String specialization;
+
+    private Integer experienceYears;
+
+    private Double salary;
+
+    private LocalDate hireDate;
 
     private Status status;
 }

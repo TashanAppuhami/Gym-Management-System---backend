@@ -20,9 +20,9 @@ public class MemberServiceImpl implements MemberService {
 
         Member member = modelMapper.map(memberDto, Member.class);
 
-        Member savedMember = memberRepositary.save(member);
+        memberRepositary.save(member);
 
-        return modelMapper.map(savedMember, MemberDto.class);
+        return modelMapper.map(member, MemberDto.class);
     }
 
     @Override
