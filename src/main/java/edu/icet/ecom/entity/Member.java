@@ -1,7 +1,6 @@
 package edu.icet.ecom.entity;
 
 import edu.icet.ecom.util.Gender;
-import edu.icet.ecom.util.MembershipPlan;
 import edu.icet.ecom.util.Status;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -36,7 +35,8 @@ public class Member {
 
     private String address;
 
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
+    @JoinColumn(name = "membership_plans")
     private MembershipPlan membershipPlan;
 
     @Enumerated(EnumType.STRING)

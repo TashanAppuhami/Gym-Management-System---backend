@@ -1,7 +1,6 @@
 package edu.icet.ecom.dto;
 
 import edu.icet.ecom.util.Gender;
-import edu.icet.ecom.util.MembershipPlan;
 import edu.icet.ecom.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,7 +35,7 @@ public class MemberDto {
 
     private String address;
 
-    private MembershipPlan membershipPlan;
+    private MembershipPlanDto membershipPlan;
 
     private Status status;
 }
